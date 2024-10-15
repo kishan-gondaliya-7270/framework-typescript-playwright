@@ -1,0 +1,32 @@
+{
+  "name": "flight-network-automation",
+  "description": "Flight Network end-to-end test automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kishan Gondaliya",
+  "license": "MIT",
+  "scripts": {
+    "tsc": "tsc",
+    "install:browsers": "npx playwright install",
+    "test:default": "npx playwright test --project=chromium  --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:ui": "npx playwright test --ui",
+    "test:report": "npx playwright show-report reports",
+    "test:chromium": "playwright test --project=chromium --headed",
+    "test:firefox": "playwright test --project=firefox --headed",
+    "test:webkit": "playwright test --project=webkit --headed",
+    "format": "npx prettier --write .",
+    "lint": "npx eslint \"./src/**/*.ts\" --fix"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "^8.56.0",
+    "prettier": "^2.3.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.44.1",
+    "playwright": "^1.44.1"
+  }
+}

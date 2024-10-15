@@ -1,0 +1,51 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "@typescript-eslint/no-base-to-string": "error",
+    "@typescript-eslint/no-unnecessary-boolean-literal-compare": 2,
+
+    // syntax preferences
+    "object-curly-spacing": ["error", "always"],
+    "quotes": [
+      2,
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "no-extra-semi": 2,
+    "@typescript-eslint/semi": [2],
+    "comma-style": [2, "last"],
+    "wrap-iife": [2, "inside"],
+    "spaced-comment": [
+      2,
+      "always",
+      {
+        "markers": ["*"]
+      }
+    ],
+    "eqeqeq": [2],
+    "accessor-pairs": [
+      2,
+      {
+        "getWithoutSet": false,
+        "setWithoutGet": false
+      }
+    ],
+    "brace-style": [2, "1tbs", { "allowSingleLine": true }],
+    "curly": [2, "multi-or-nest", "consistent"],
+    "new-parens": 2,
+    "arrow-parens": [2, "as-needed"],
+    "prefer-const": 2,
+    "quote-props": [2, "consistent"],
+    "nonblock-statement-body-position": [2, "below"]
+  }
+}
